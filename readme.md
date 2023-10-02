@@ -1,43 +1,37 @@
 # Dominoes Puzzle Solver
- in this project we aim to find all possible cases where we can
- place the maximum number of dominos in given board with dimensions given from the user using optimal
- and non optimal algorithms 
- we used uninformed search for the nonoptimal Dominoes Puzzle
- and informed search for the optimal dominoes puzzle Solver
 
-##Requirements
-*Prolog version 8.4.2
-*Pyswip
-*numpy
-*tkiter
-*PIL
+**Introduction:**
 
-example for input
+This project aims to find optimal and non-optimal solutions for placing the maximum number of dominos on a given board with user-defined dimensions.
+
+## Requirements
+- Prolog version 8.4.2
+- Pyswip
+- numpy
+- tkinter
+- PIL (Pillow)
+
+**Example Input**
 
 ![image](images/inputs.jpg)
 
+## Uninformed Search
 
+In the uninformed search, we attempt various combinations to fill the 2D space with dominos without considering the optimality of the placement. The primary requirement is to fill the entire board.
 
-## uninformed search 
-
-here we try all the different combination to fill the 2d space with dominoes regradless of the optimality of the dominoes placements
-
-the only requirment of this problem is that there is no more spaces we could fill 
-
-example:
+**Example:**
 
 ![image](images/uninformedoutput.JPG)
 
+## Informed Search
 
-## informed search
+In the informed search, we explore different combinations to maximize the number of dominos placed on the board using an A* search algorithm.
 
-here we try all the different combination to fill the 2d space with the maximum number of dominoes that could be place on the board using A* search
+**Heuristic:**
 
+We use the heuristic of maximizing the area of contiguous batches divided by 2 as a guiding factor.
 
-### heruistic 
-
-the area of contiguous batch/2 is a good dominant heurstic
-
-example on the informed search:
+**Example:**
 
 ![image](images/informedoutput.JPG)
+
